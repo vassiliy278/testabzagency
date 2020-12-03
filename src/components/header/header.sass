@@ -1,0 +1,81 @@
+$red-color: #ef5b4c
+$blue-color: #007bff
+.navigation_wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    -webkit-position: sticky
+    position: sticky
+    z-index: 200
+    top: 0
+    height: 68px
+    background-color: #fff
+.logo
+    position: relative
+    z-index: 202
+    padding-left: 40px
+    transform: scale(1.1)
+.mobile
+    display: none
+.menu_list
+    display: flex
+    list-style: none
+    .clicked
+        color: $blue-color
+    li
+        padding-right: 33px
+        color: #444
+        &:hover
+            color: $red-color
+            cursor: pointer
+@media screen and (min-width: 320px) and (max-width: 1024px)
+    
+    .navigation_wrapper
+        height: 7vh
+        border-bottom: 1px solid #bbb
+        box-sizing: border-box
+    .logo
+        transform: scale(1)
+        padding-top: 2px
+        padding-left: 12px
+    .mobile
+        display: flex
+        width: 20px
+        margin-right: 10px
+    .menu_list
+        display: none
+    .menu_list_mobile_wrapper
+        margin-top: 7vh
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 100%
+        height: 93vh
+        position: fixed
+        z-index: 202
+        top: 0
+        background-color: rgba(0, 0, 0, .3)
+        left: -100%
+        transition: 100ms ease
+        .menu_list_mobile_block
+            width: 70%
+            background-color: #fff
+            flex-basis: 33.34%
+            margin: 0
+            border-bottom: 1px solid #bbb
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            li
+                list-style: none
+    .show_mobile_menu
+        left: 0%
+        
+@media screen and (min-width: 768px) and (max-width: 1024px)
+    .menu_list
+        display: none
+    .mobile
+        margin-right: 30px
+    .logo
+        padding-left: 20px

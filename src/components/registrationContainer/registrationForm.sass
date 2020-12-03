@@ -1,0 +1,220 @@
+.form_wrapper
+    margin: 250px auto
+    width: 50%
+    h1
+        letter-spacing: .2rem
+        text-align: center
+    p   
+        text-align: center
+    form
+        margin: 0px auto
+        width: 91%
+        display: flex
+        flex-direction: column
+        label
+            line-height: 1rem
+            margin-top: 40px
+            margin-bottom: 7px
+        input
+            width: 100%
+            box-sizing: border-box
+            padding: 0
+            padding-left: 12px
+            height: 43px
+            font-size: 16px
+            font-family: 'Open Sans', sans-serif
+            border-radius: 4px
+            outline: none
+            border: 1px solid #aaa
+        input:focus
+            outline: none
+            border: 1px solid #89b6fa
+            box-shadow: 0px 0px 7px rgba(125, 150, 230, .5)
+        input:invalid 
+            border: 1px solid rgba(225, 13, 12, 1)
+            box-shadow: 0px 0px 7px rgba(225, 13, 12, .5)
+        .phone_description
+            position: absolute
+            font-size: 14px
+            text-align: left
+            line-height: 0rem
+            margin-top: 22px
+        .radio_buttons_description
+            text-align: left
+            margin-top: 48px
+        .radio_buttons_container
+            margin-bottom: 5px
+            margin-top: 7px
+        #photo
+            display: none
+.name_input_wrapper, .email_wrapper
+    width: 100%
+    position: relative
+.phone_wrapper
+    position: relative
+    width: 100%
+    .number_prefix
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        color: #aaa
+        padding-left: 12px
+#phone
+    padding-left: 48px
+    width: 100%
+    
+.photo_button_wrapper
+    position: relative
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    border: 1px solid #aaa
+    border-radius: 4px
+    height: 40px
+    .photo_button_text
+        display: flex
+        align-items: center
+        height: 100% 
+        padding-left: 12px
+        margin-bottom: 0
+        color: #aaa
+        margin-top: 0
+    .browse_button
+        display: flex
+        align-items: center
+        height: 100%
+        margin-top: 0px
+        margin-bottom: 0px
+        border-left: 1px solid #aaa
+        padding: 0px 20px
+        cursor: pointer
+        color: #000
+    .browse_button:active
+        color: red
+.file_input
+    p   
+        margin-top: 17px
+        margin-bottom: 10px
+        text-align: left
+
+input[type=radio]
+    display: none
+.radio_buttons_container
+    padding-left: 20px
+    position: relative
+#radio_button:before
+    box-sizing: border-box
+    left: 0px
+    top: 50%
+    transform: translateY(-50%)
+    position: absolute
+    display: table
+    content: ''
+    width: 18px
+    height: 18px
+    border-radius: 50%
+    border: 1px solid #aaa
+input[type=radio]:checked + #radio_button:before
+    border: 5px solid #34abff
+#radio_button
+    margin-left: 10px
+input::placeholder
+    color: #aaa
+#submit_button
+    margin: 50px auto
+    width: 240px
+    height: 45px
+    font-size: 16px
+    color: #ffffff
+    background-color: #ef5b4c
+    font-family: 'Open Sans', sans-serif
+    border: 0
+    border-radius: 5px
+    cursor: pointer
+    font-size: 17px
+    
+    &:active, &:focus
+        border: none
+        outline: none
+    &:hover
+        background-color: #d24435
+.check_passed
+    background-color: #eee
+.warning
+    position: absolute
+    color: #d24435
+    top: 100%
+    left: 0
+.invalid_class
+    border: 1px solid rgba(225, 13, 12, 1) !important
+    border-radius: 4px
+    box-shadow: 0px 0px 7px rgba(225, 13, 12, .5)
+@media screen and (min-width: 320px) and (max-width: 767px)
+    .form_wrapper
+        margin: 0 auto
+        margin-top: 120px
+        margin-bottom: 40px
+        width: 100%
+        h1  
+            width: 100%
+            letter-spacing: 0rem
+            font-size: 26px
+        p   
+            margin: 0 auto
+            margin-top: 15px
+            width: 80%
+            font-size: 14px
+            line-height: 1.3rem
+            color: #777
+        form
+            .radio_buttons_description
+                margin-left: 0
+                color: black
+                font-size: 16px
+                margin-bottom: 10px
+        .file_input
+            p   
+                margin-left: 0
+                color: black
+                font-size: 16px
+                padding-bottom: 15px
+        .photo_button_wrapper
+            .photo_button_text
+                padding: 0          
+                margin-left: 10px
+                color: #aaa   
+    #submit_button
+        margin: 50px auto
+        width: 70%
+        height: 40px
+        font-size: 16px
+@media screen and (min-width: 768px) and (max-width: 1024px)
+    .form_wrapper
+        margin: 0 auto
+        margin-top: 120px
+        margin-bottom: 40px
+        width: 70%
+        h1
+            letter-spacing: 0
+        p   
+            margin: 20px auto
+            margin-bottom: 10px
+            width: 90%
+        form
+            .radio_buttons_description
+                margin-left: 0
+                color: black
+                font-size: 16px
+                margin-bottom: 10px
+        .file_input
+            p   
+                margin-left: 0
+                color: black
+                font-size: 16px
+                padding-bottom: 15px
+        .photo_button_wrapper
+            .photo_button_text
+                padding: 0          
+                margin-left: 10px
+                color: #aaa  
